@@ -1024,6 +1024,11 @@ def care_dashboard_tab():
         if st.button("🧪 Fertilizer Check", use_container_width=True):
             st.info("Review fertilizing schedule - most plants need feeding every 2-4 weeks during growing season")
 
+import os
+
 if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+
     display_sidebar()
     main()
